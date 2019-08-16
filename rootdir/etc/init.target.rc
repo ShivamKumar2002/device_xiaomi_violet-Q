@@ -148,6 +148,10 @@ service vendor.pd_mapper /vendor/bin/pd-mapper
     user system
     group system
 
+# XiaomiParts
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
+    chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
+
 #Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
