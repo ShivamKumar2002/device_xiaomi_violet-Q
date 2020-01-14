@@ -22,3 +22,6 @@ ro.boot.fpsensor            u:object_r:vendor_fp_prop:s0
 # Thermal
 sys.thermal.                u:object_r:thermal_engine_prop:s0
 persist.sys.thermal.        u:object_r:thermal_engine_prop:s0
+
+# Dirac
+persist.audio.dirac.                u:object_r:dirac_prop:s0
