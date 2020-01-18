@@ -16,6 +16,9 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common Stag stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_WIFI_EXT := true
+IS_PHONE:= true
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+
 
 $(call inherit-product, vendor/stag/main.mk)
 
