@@ -19,38 +19,34 @@ import common
 import re
 
 def FullOTA_InstallEnd(info):
-  input_zip = info.input_zip
-  OTA_InstallEnd(info, input_zip)
+  OTA_InstallEnd(info)
   return
 
 def IncrementalOTA_InstallEnd(info):
-  input_zip = info.target_zip
-  OTA_InstallEnd(info, input_zip)
+  OTA_InstallEnd(info)
   return
 
 def FullOTA_Assertions(info):
-  input_zip = info.input_zip
-  AddBasebandAssertion(info, input_zip)
+  AddBasebandAssertion(info, info.input_zip)
   return
 
 def IncrementalOTA_Assertions(info):
-  input_zip = info.target_zip
-  AddBasebandAssertion(info, input_zip)
+  AddBasebandAssertion(info, info.target_zip)
   return
 
-def AddImage(info, input_zip, basename, dest):
+def AddImage(info, basename, dest):
   path = "IMAGES/" + basename
-  if path not in input_zip.namelist():
+  if path not in info.input_zip.namelist():
     return
 
-  data = input_zip.read(path)
+  data = info.input_zip.read(path)
   common.ZipWriteStr(info.output_zip, basename, data)
   info.script.Print("Flashing {} image".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
-def OTA_InstallEnd(info, input_zip):
-  AddImage(info, input_zip, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
-  AddImage(info, input_zip, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+def OTA_InstallEnd(info):
+  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
+  AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
   return
 
 def AddBasebandAssertion(info, input_zip):
