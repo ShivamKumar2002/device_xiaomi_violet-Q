@@ -170,8 +170,6 @@ service vendor.pd_mapper /vendor/bin/pd-mapper
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_min
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal
 
-<<<<<<< HEAD
-=======
 service folio_daemon /system/bin/folio_daemon
     class late_start
     user system
@@ -184,7 +182,6 @@ on property:persist.service.folio_daemon=0
 on property:persist.service.folio_daemon=1
     start folio_daemon
 
->>>>>>> b76befa1... sdm660-common: XiaomiParts: Start folio_daemon only if a prop is set
 #Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
