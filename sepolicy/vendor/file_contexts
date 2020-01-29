@@ -7,6 +7,10 @@
 # Power HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service\.violet u:object_r:hal_power_default_exec:s0
 
+# Kcal
+/sys/devices/platform/kcal_ctrl.0(/.*)?         u:object_r:kcal_dev:s0
+/sys/bus/platform/drivers/kcal_ctrl(/.*)?       u:object_r:kcal_dev:s0
+
 # IR
 /dev/spidev[0-9]\.1          u:object_r:lirc_device:s0
 
