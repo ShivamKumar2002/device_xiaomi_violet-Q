@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-ifeq("x","y")
+ifeq ("x","y")
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
