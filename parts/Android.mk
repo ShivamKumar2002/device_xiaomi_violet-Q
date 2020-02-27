@@ -3,7 +3,6 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-ifeq ("x","y")
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -30,4 +29,3 @@ LOCAL_RESOURCE_DIR := \
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 include $(BUILD_PACKAGE)
-endif
