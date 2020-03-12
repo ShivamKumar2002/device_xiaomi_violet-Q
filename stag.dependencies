@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "kernel_xiaomi_sm6150",
+    "target_path": "kernel/xiaomi/sm6150",
+    "branch": "sx"
+  },
+  {
+    "repository": "vendor_xiaomi_violet",
+    "target_path": "vendor/xiaomi/violet",
+    "branch": "sx"
+  }
+]
