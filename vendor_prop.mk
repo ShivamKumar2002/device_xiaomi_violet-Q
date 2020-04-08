@@ -122,3 +122,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_app_phase_offset_ns=500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000
+
+#Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+  persist.vendor.camera.eis.enable=1 \
+  persist.vendor.camera.ois.disable=1 \
+  persist.vendor.camera.is_type=4 \
+  persist.vendor.camera.multicam=TRUE \
+  persist.vendor.camera.multicam.framesync=1 \
+  persist.vendor.camera.exif.make=Xiaomi \
+  persist.vendor.camera.multicam.hwsync=TRUE
