@@ -1,0 +1,3 @@
+allow system_app sysfs_fps:file { open read getattr };
+allow system_app sysfs_graphics:dir { search };
+allow system_app sysfs_graphics:file { read open getattr };
