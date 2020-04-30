@@ -25,3 +25,4 @@
 
 # FPS Info
 /sys/class/drm/sde-crtc-0/measured_fps               u:object_r:sysfs_fps:s0
+
