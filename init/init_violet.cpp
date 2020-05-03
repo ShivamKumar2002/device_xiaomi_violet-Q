@@ -60,5 +60,4 @@ void vendor_load_properties()
     // fingerprint
    property_override("ro.build.description", "violet-user-10-QKQ1.190915.002-20.4.1-release-keys");
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ2A.200405.005/6254899:user/release-keys");
-    property_override("vendor.audio.adm.buffering.ms", "6");
 }
