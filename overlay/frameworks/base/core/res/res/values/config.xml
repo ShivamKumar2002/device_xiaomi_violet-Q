@@ -560,4 +560,6 @@
     <bool name="config_enableAutoPowerModes">true</bool>
     <!-- Whether device has a physical display cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
+     <!-- Whether device has screen with higher aspect ratio -->
+     <bool name="config_haveHigherAspectRatioScreen">true</bool>
 </resources>
