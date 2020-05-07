@@ -1,0 +1,2 @@
+allow untrusted_app_25 net_dns_prop:file { read open getattr };
+
