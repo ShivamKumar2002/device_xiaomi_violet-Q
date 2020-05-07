@@ -1,0 +1,2 @@
+allow vendor_init proc_dirty:file { write open read getattr };
+
