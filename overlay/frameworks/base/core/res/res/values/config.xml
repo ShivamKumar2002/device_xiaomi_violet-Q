@@ -566,5 +566,7 @@
      <!-- Whether device has screen with higher aspect ratio -->
      <bool name="config_haveHigherAspectRatioScreen">true</bool>
      <!-- Whether device has a notch -->
-    <bool name="config_haveNotch">true</bool>
+     <bool name="config_haveNotch">true</bool>
+     <!-- Whether to use in-built Screen Record service -->
+     <bool name="config_showScreenRecord">true</bool>
 </resources>
