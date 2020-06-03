@@ -133,3 +133,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
   persist.vendor.camera.multicam.framesync=1 \
   persist.vendor.camera.exif.make=Xiaomi \
   persist.vendor.camera.multicam.hwsync=TRUE
+
+# Zygote preforking
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
