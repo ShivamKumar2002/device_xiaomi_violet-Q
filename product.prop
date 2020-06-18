@@ -14,6 +14,8 @@ persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
 # Camera
+camera.disable_zsl_mode=1
+persist.camera.gyro.disable=0
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 # LMKD
@@ -22,6 +24,25 @@ ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
 ro.lmk.use_minfree_levels=true
 ro.lmk.log_stats=true
+
+# HwUi
+hwui.disable_vsync=true
+debug.sf.recomputecrop=0
+debug.egl.hw=1
+debug.composition.type=c2d
+persist.sys.composition.type=c2d
+ro.config.dyn_ram=true
+ro.hwui.texture_cache_size=276
+ro.hwui.layer_cache_size=144
+ro.hwui.r_buffer_cache_size=24
+ro.hwui.path_cache_size=96
+ro.hwui.gradient_cache_size=3
+ro.hwui.drop_shadow_cache_size=24
+dalvik.vm.heaptargetutilization=0.75
+debug.sf.disable_backpressure=0
+debug.sf.latch_unsignaled=1
+debug.sf.hw=1
+ro.sf.compbypass.enable=0
 
 # Media
 media.aac_51_output_enabled=true
