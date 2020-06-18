@@ -9,6 +9,9 @@ ro.vendor.camera.req.fmq.size                   u:object_r:vendor_camera_prop:s0
 ro.camera.res.fmq.size                          u:object_r:vendor_camera_prop:s0
 ro.camera.req.fmq.size                          u:object_r:vendor_camera_prop:s0
 
+# Dolby
+persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_prop:s0
+
 # Mlipay
 persist.sys.ifaa            u:object_r:ifaa_prop:s0
 persist.vendor.sys.pay.     u:object_r:ifaa_prop:s0
