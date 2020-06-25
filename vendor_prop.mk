@@ -65,7 +65,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_decimation=1 \
     vendor.display.disable_hw_recovery_dump=1 \
     vendor.display.enable_default_color_mode=0 \
-    vendor.gralloc.disable_ubwc=0
+    vendor.gralloc.disable_ubwc=0 \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
