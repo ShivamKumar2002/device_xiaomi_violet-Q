@@ -340,6 +340,10 @@ PRODUCT_PACKAGES += \
 # Vendor SPL
 VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
+# Recorder
+PRODUCT_PACKAGES += \
+    KimciRecorder
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
