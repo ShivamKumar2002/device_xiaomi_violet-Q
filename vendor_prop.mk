@@ -126,7 +126,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000 \
-    debug.hwui.renderer=skiagl
+    debug.hwui.renderer=skiagl \
+    debug.cpurend.vsync=false
 
 #Camera
 PRODUCT_PROPERTY_OVERRIDES += \
