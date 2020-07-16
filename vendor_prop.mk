@@ -33,6 +33,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio_hal.period_size=240 \
     vendor.voice.path.for.pcm.voip=true
 
+# Boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.vendor.shutdown.waittime=500
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
