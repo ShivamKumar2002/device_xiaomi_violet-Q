@@ -1,0 +1,43 @@
+[
+  {
+    "repository": "vendor_xiaomi_violet",
+    "target_path": "vendor/xiaomi/violet",
+    "branch": "ten",
+    "remote": "gitlab"
+  },
+  {
+    "repository": "DerpFest-Devices/kernel_xiaomi_sm6150",
+    "target_path": "kernel/xiaomi/sm6150",
+    "branch": "ten"
+  },
+  {
+    "repository": "display_hal_violet",
+    "target_path": "hardware/qcom/sm8150/display",
+    "branch": "sm8150"
+  },
+  {
+    "repository": "display_hal_violet",
+    "target_path": "hardware/qcom-caf/sm8150/display",
+    "branch": "sm8150"
+  },
+  {
+    "repository": "media_hal_violet",
+    "target_path": "hardware/qcom/sm8150/media",
+    "branch": "sm8150"
+  },
+  {
+    "repository": "media_hal_violet",
+    "target_path": "hardware/qcom-caf/sm8150/media",
+    "branch": "sm8150"
+  },
+  {
+    "repository": "audio_hal_violet",
+    "target_path": "hardware/qcom/sm8150/audio",
+    "branch": "sm8150"
+  },
+  {
+    "repository": "audio_hal_violet",
+    "target_path": "hardware/qcom-caf/sm8150/audio",
+    "branch": "sm8150"
+  }
+]
