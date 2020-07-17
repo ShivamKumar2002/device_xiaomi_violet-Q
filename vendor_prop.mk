@@ -137,6 +137,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
   persist.vendor.camera.eis.enable=1 \
   persist.vendor.camera.ois.disable=1 \
+  persist.camera.HAL3.enabled=1 \
+  persist.vendor.camera.HAL3.enabled=1 \
 
 # Zygote preforking
 PRODUCT_PROPERTY_OVERRIDES += \
