@@ -137,11 +137,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
   persist.vendor.camera.eis.enable=1 \
   persist.vendor.camera.ois.disable=1 \
-  persist.vendor.camera.is_type=4 \
-  persist.vendor.camera.multicam=TRUE \
-  persist.vendor.camera.multicam.framesync=1 \
-  persist.vendor.camera.exif.make=Xiaomi \
-  persist.vendor.camera.multicam.hwsync=TRUE
 
 # Zygote preforking
 PRODUCT_PROPERTY_OVERRIDES += \
