@@ -1,6 +1,6 @@
 [
   {
-    "repository": "vendor_xiaomi_violet",
+    "repository": "ShivamKumar2002/vendor_xiaomi_violet",
     "target_path": "vendor/xiaomi/violet",
     "branch": "ten",
     "remote": "gitlab"
@@ -9,5 +9,5 @@
     "repository": "DerpFest-Devices/kernel_xiaomi_sm6150",
     "target_path": "kernel/xiaomi/sm6150",
     "branch": "ten"
-  },
+  }
 ]
