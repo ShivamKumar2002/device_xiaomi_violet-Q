@@ -14,8 +14,7 @@ persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
 # Camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCamera
-camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCamera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 # LMKD
 ro.config.low_ram=false
