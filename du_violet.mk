@@ -17,7 +17,6 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_WIFI_EXT := true
 IS_PHONE:= true
-DU_BUILD_TYPE := OFFICIAL
 $(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
