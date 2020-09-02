@@ -1,3 +1,18 @@
+# Dolby
+-app/daxService/daxService.apk
+-app/DaxUI/DaxUI.apk
+vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
+vendor/etc/dolby/dap-default.xml
+vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
+vendor/lib/libdapparamstorage.so
+vendor/lib/soundfx/libatmos.so
+vendor/lib/vendor.dolby.hardware.dms@1.0.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
+vendor/lib64/soundfx/libatmos.so
+vendor/lib64/vendor.dolby.hardware.dms@1.0.so
+
 # ADSP - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/adsprpcd|0cdd541ee0a365c5dccd0613e495611f4d0f6607
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|13d8a911642844bde32d533948a35730e17d41ad
