@@ -7,8 +7,5 @@ type vendor_fp_prop, property_type;
 # Mlipay
 type ifaa_prop, property_type;
 
-# Dolby
-type vendor_dolby_loglevel_prop, property_type;
-
 # Dirac
 type dirac_prop, property_type;
