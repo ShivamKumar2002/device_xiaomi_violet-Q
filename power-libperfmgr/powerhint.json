@@ -5,6 +5,7 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
+        "1708800",
         "1593600"
       ],
       "DefaultIndex": 0,
@@ -15,8 +16,10 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "1017600",
-        "0"
+        "1708800",
+        "1593600",
+        "1363200",
+        "1017600"
       ],
       "ResetOnInit": true
     },
@@ -25,7 +28,8 @@
       "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1017600"
+        "2016000",
+        "1708800"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -35,7 +39,12 @@
       "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "0"
+        "2016000",
+        "1708800",
+        "1516800",
+        "1363200",
+        "1209600",
+        "1017600"
       ],
       "ResetOnInit": true
     },
@@ -351,7 +360,7 @@
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
-      "Value": "15"
+      "Value": "30"
     },
     {
       "PowerHint": "INTERACTION",
@@ -494,31 +503,31 @@
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "EnergyAware",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "0"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPULittleClusterMaxFreq",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
@@ -746,37 +755,37 @@
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "EnergyAware",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "0"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPULittleClusterMaxFreq",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "PMQoSCpuDmaLatency",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "44"
     },
     {
