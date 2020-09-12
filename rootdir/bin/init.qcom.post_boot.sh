@@ -3106,6 +3106,16 @@ case "$target" in
 	sku_identified=0
       fi
 
+      # Core control parameters for big cluster
+      echo 2 > /sys/devices/system/cpu/cpu6/core_ctl/min_cpus
+      echo 60 > /sys/devices/system/cpu/cpu6/core_ctl/busy_up_thres
+      echo 30 > /sys/devices/system/cpu/cpu6/core_ctl/busy_down_thres
+      echo 100 > /sys/devices/system/cpu/cpu6/core_ctl/offline_delay_ms
+      echo 4 > /sys/devices/system/cpu/cpu6/core_ctl/task_thres
+
+      # Disable Core control on silver
+      echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+
       # Setting b.L scheduler parameters
       echo 95 95 > /proc/sys/kernel/sched_upmigrate
       echo 85 85 > /proc/sys/kernel/sched_downmigrate
