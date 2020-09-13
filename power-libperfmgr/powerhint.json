@@ -5,7 +5,9 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1209600"
+        "1612800",
+        "1497600",
+        "1248000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -15,8 +17,11 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "1017000",
-        "0"
+        "1612800",
+        "1497600",
+        "1324800",
+        "1248000",
+        "576000"
       ],
       "ResetOnInit": true
     },
@@ -25,8 +30,10 @@
       "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1900800",
-        "1017600"
+        "1939200",
+        "1708800",
+        "1555200",
+        "1324800"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -36,7 +43,11 @@
       "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "0"
+        "1708800",
+        "1555200",
+        "1324800",
+        "1132800",
+        "825600"
       ],
       "ResetOnInit": true
     },
@@ -44,9 +55,8 @@
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
-        "845000000",
-        "745000000",
-        "700000000"
+        "585000000",
+        "427000000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -55,9 +65,10 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
-        "550000000",
-        "435000000",
-        "290000000"
+        "585000000",
+        "427000000",
+        "345000000",
+        "257000000"
       ],
       "ResetOnInit": true
     },
@@ -68,7 +79,6 @@
         "6881",
         "5931",
         "3879",
-        "2597",
         "0"
       ],
       "ResetOnInit": true
@@ -110,30 +120,14 @@
       "ResetOnInit": true
     },
     {
-      "Name": "TASchedtuneHighCap",
-      "Path": "/dev/stune/top-app/schedtune.prefer_high_cap",
-      "Values": [
-        "1",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "CDSchedtuneBoost",
       "Path": "/dev/stune/camera-daemon/schedtune.boost",
       "Values": [
+        "10",
         "1",
         "0"
       ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CDSchedtuneHighCap",
-      "Path": "/dev/stune/camera-daemon/schedtune.prefer_high_cap",
-      "Values": [
-        "1",
-        "0"
-      ],
+      "DefaultIndex": 2,
       "ResetOnInit": true
     },
     {
@@ -177,7 +171,7 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/io_percent",
       "Values": [
         "80",
-        "68"
+        "50"
       ],
       "ResetOnInit": true
     },
@@ -185,7 +179,7 @@
       "Name": "CPUBWMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/min_freq",
       "Values": [
-        "12298",
+        "14236",
         "9155",
         "2288"
       ],
@@ -196,8 +190,8 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/min_freq",
       "Values": [
         "6881",
-        "5161",
-        "2086"
+        "2597",
+        "762"
       ],
       "ResetOnInit": true
     },
@@ -232,7 +226,7 @@
       "Name": "CameraHalCpuset",
       "Path": "/dev/cpuset/camera-daemon/cpus",
       "Values": [
-        "0-6",
+        "0-5",
         "0-7"
       ],
       "ResetOnInit": true
@@ -250,7 +244,7 @@
       "Name": "L3BigClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu6-cpu-l3-lat/min_freq",
       "Values": [
-        "1516200000",
+        "1459200000",
         "300000000"
       ],
       "ResetOnInit": true
@@ -259,17 +253,35 @@
       "Name": "PMQoSCpuDmaLatency",
       "Path": "/dev/cpu_dma_latency",
       "Values": [
-        "43",
+        "44",
         "100"
       ],
       "HoldFd": true
     },
     {
-      "Name": "EnergyAware",
-      "Path": "/proc/sys/kernel/sched_energy_aware",
+      "Name": "UfsClkGateEnable",
+      "Path": "/sys/devices/platform/soc/1d84000.ufshc/clkgate_enable",
       "Values": [
         "0",
         "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "UfsHibern8Enable",
+      "Path": "/sys/devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "SchedFeatures",
+      "Path": "/sys/kernel/debug/sched_features",
+      "Values": [
+        "NO_ENERGY_AWARE",
+        "ENERGY_AWARE"
       ],
       "ResetOnInit": true
     },
@@ -278,6 +290,7 @@
       "Path": "vendor.powerhal.state",
       "Values": [
         "CAMERA_STREAMING",
+        "CAMERA_STREAMING_1080P",
         "CAMERA_STREAMING_4K",
         "CAMERA_STREAMING_60FPS",
         "CAMERA_STREAMING_SECURE",
@@ -316,37 +329,37 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "1017600"
+      "Value": "1324800"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
-      "Value": "1209600"
+      "Value": "1248000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "745000000"
+      "Value": "427000000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1132800"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1017000"
+      "Value": "1248000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
       "Value": "30"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "TASchedtuneHighCap",
-      "Duration": 0,
-      "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
@@ -376,13 +389,25 @@
       "PowerHint": "INTERACTION",
       "Node": "LLCCBWMinFreq",
       "Duration": 0,
-      "Value": "2086"
+      "Value": "2597"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "UfsClkGateEnable",
+      "Duration": 200,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "UfsHibern8Enable",
+      "Duration": 200,
+      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "EnergyAware",
+      "Node": "SchedFeatures",
       "Duration": 5000,
-      "Value": "0"
+      "Value": "NO_ENERGY_AWARE"
     },
     {
       "PowerHint": "LAUNCH",
@@ -406,7 +431,7 @@
       "PowerHint": "LAUNCH",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 5000,
-      "Value": "43"
+      "Value": "44"
     },
     {
       "PowerHint": "LAUNCH",
@@ -430,7 +455,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPUBWMinFreq",
       "Duration": 5000,
-      "Value": "12298"
+      "Value": "14236"
     },
     {
       "PowerHint": "LAUNCH",
@@ -460,43 +485,67 @@
       "PowerHint": "LAUNCH",
       "Node": "L3BigClusterMinFreq",
       "Duration": 5000,
-      "Value": "1516200000"
+      "Value": "1459200000"
     },
     {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "EnergyAware",
-      "Duration": 3000,
+      "PowerHint": "LAUNCH",
+      "Node": "UfsClkGateEnable",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "UfsHibern8Enable",
+      "Duration": 5000,
       "Value": "0"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
+      "Node": "SchedFeatures",
+      "Duration": 1000,
+      "Value": "NO_ENERGY_AWARE"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPULittleClusterMaxFreq",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 1000,
-      "Value": "43"
+      "Value": "44"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "UfsClkGateEnable",
+      "Duration": 1000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "UfsHibern8Enable",
+      "Duration": 1000,
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_STREAMING",
@@ -508,7 +557,7 @@
       "PowerHint": "CAMERA_STREAMING",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "1900800"
+      "Value": "1939200"
     },
     {
       "PowerHint": "CAMERA_STREAMING",
@@ -535,12 +584,6 @@
       "Value": "1"
     },
     {
-      "PowerHint": "CAMERA_STREAMING",
-      "Node": "CDSchedtuneHighCap",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_60FPS",
       "Node": "PowerHALMainState",
       "Duration": 0,
@@ -550,17 +593,11 @@
       "PowerHint": "CAMERA_STREAMING_60FPS",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "1900800"
+      "Value": "1939200"
     },
     {
       "PowerHint": "CAMERA_STREAMING_60FPS",
       "Node": "CDSchedtuneBoost",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_60FPS",
-      "Node": "CDSchedtuneHighCap",
       "Duration": 0,
       "Value": "1"
     },
@@ -616,7 +653,7 @@
       "PowerHint": "CAMERA_STREAMING_4K",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "1900800"
+      "Value": "1939200"
     },
     {
       "PowerHint": "CAMERA_STREAMING_4K",
@@ -670,7 +707,7 @@
       "PowerHint": "CAMERA_STREAMING_SECURE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "1900800"
+      "Value": "1939200"
     },
     {
       "PowerHint": "CAMERA_STREAMING_SECURE",
@@ -712,49 +749,49 @@
       "PowerHint": "CAMERA_STREAMING_SECURE",
       "Node": "CameraHalCpuset",
       "Duration": 0,
-      "Value": "0-6"
+      "Value": "0-5"
     },
     {
       "PowerHint": "CAMERA_SHOT",
-      "Node": "EnergyAware",
-      "Duration": 5000,
-      "Value": "0"
+      "Node": "SchedFeatures",
+      "Duration": 1000,
+      "Value": "NO_ENERGY_AWARE"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPULittleClusterMaxFreq",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 5000,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_SHOT",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 1000,
-      "Value": "43"
+      "Value": "44"
     },
     {
       "PowerHint": "AUDIO_STREAMING",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2000,
-      "Value": "43"
+      "Value": "44"
     },
     {
       "PowerHint": "AUDIO_LOW_LATENCY",
@@ -766,7 +803,7 @@
       "PowerHint": "AUDIO_LOW_LATENCY",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 0,
-      "Value": "43"
+      "Value": "44"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -778,19 +815,19 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "435000000"
+      "Value": "427000000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "845000000"
-	},	
-    {	
-      "PowerHint": "TPU_BOOST",	
-      "Node": "PMQoSCpuDmaLatency",	
-      "Duration": 2000,	
-      "Value": "43"
+      "Value": "585000000"
+    },
+    {
+      "PowerHint": "TPU_BOOST",
+      "Node": "PMQoSCpuDmaLatency",
+      "Duration": 2000,
+      "Value": "44"
     }
   ]
 }
