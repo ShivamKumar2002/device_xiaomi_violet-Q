@@ -1,0 +1,3 @@
+type dms-hal-1-0, domain;
+type dms-hal-1-0_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(dms-hal-1-0);
