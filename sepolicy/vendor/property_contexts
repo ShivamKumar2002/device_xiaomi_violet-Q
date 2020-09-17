@@ -29,3 +29,6 @@ persist.sys.thermal.        u:object_r:thermal_engine_prop:s0
 
 # Dirac
 persist.audio.dirac.                u:object_r:dirac_prop:s0
+
+# Audio
+audio.sys.		u:object_r:audio_prop:s0
