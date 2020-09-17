@@ -3,6 +3,7 @@ allow hal_audio_default mnt_vendor_file:dir search;
 allow hal_audio_default property_socket:sock_file write;
 allow hal_audio_default vendor_mpctl_prop:file { open read getattr map };
 allow hal_audio_default dms-hal-1-0:binder { call transfer };
+allow hal_audio_default dms-hal-1-0_hwservice:hwservice_manager { find };
 set_prop(hal_audio_default, vendor_audio_prop)
 get_prop(hal_audio_default, dirac_prop)
 set_prop(hal_audio_default, dirac_prop)
