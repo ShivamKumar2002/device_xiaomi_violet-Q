@@ -6,3 +6,5 @@ allow dms-hal-1-0 hal_audio_default:binder { call transfer };
 allow dms-hal-1-0 vendor_data_file:file rw_file_perms;
 allow dms-hal-1-0 platform_app:binder { call transfer };
 allow dms-hal-1-0 hwservicemanager:binder { call transfer };
+add_hwservice(dms-hal-1-0, hidl_base_hwservice)
+add_hwservice(dms-hal-1-0, dms-hal-1-0_hwservice)
