@@ -97,7 +97,8 @@
     </effects>
     <postprocess>
         <stream type="music">
-            <apply effect="music_helper"/>
+		<apply effect="music_helper"/>
+		<apply effect="dap"/>
         </stream>
         <stream type="ring">
             <apply effect="ring_helper"/>
