@@ -1,12 +1,12 @@
 [
   {
-    "repository": "ShivamKumar2002/old_vendor_violet",
+    "repository": "ShivamKumar2002/vendor_xiaomi_violet",
     "target_path": "vendor/xiaomi/violet",
     "branch": "ten",
   },
   {
     "repository": "ShivamKumar2002/msm-4.14-violet",
     "target_path": "kernel/xiaomi/sm6150",
-    "branch": "ten"
+    "branch": "ten",
   }
 ]
