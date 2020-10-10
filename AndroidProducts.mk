@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/du_violet.mk
+    $(LOCAL_DIR)/conquer_violet.mk

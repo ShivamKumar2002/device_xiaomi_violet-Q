@@ -24,8 +24,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-du
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -463,3 +462,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# HALs
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom/media \
+    hardware/qcom/display \
+    vendor/qcom/opensource/audio-hal/primary-hal

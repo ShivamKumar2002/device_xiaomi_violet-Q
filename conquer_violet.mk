@@ -13,15 +13,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common Corvus stuff.
+# Inherit some common ConquerOS stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_WIFI_EXT := true
 IS_PHONE:= true
-DU_BUILD_TYPE := OFFICIAL
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+$(call inherit-product, vendor/conquer/config/common.mk)
+$(call inherit-product, device/qcom/common/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := du_violet
+PRODUCT_NAME := conquer_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
