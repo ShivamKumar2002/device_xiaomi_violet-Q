@@ -396,6 +396,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.1 \
     android.hardware.secure_element@1.0 \
     librmnetctl \
+    libnet_resolv \
     libxml2 \
     libprotobuf-cpp-full \
     libprotobuf-cpp-life
